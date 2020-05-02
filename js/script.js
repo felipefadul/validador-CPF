@@ -2,7 +2,21 @@ function validarCPF(cpf) {
   cpf = cpf.split('.').join("");
   cpf = cpf.split('-').join("");
 
+  cpfsInvalidos = ['00000000000',
+                   '11111111111',
+                   '22222222222',
+                   '33333333333',
+                   '44444444444',
+                   '55555555555',
+                   '66666666666',
+                   '77777777777',
+                   '88888888888',
+                   '99999999999'];
+
   if (cpf.length != 11)
+    return false;
+
+  if (cpfsInvalidos.includes(cpf))
     return false;
 
   var numeros = cpf.substring(0, 9);
