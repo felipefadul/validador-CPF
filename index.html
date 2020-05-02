@@ -17,8 +17,6 @@
         integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css/style.css">
-
-
 </head>
 
 <body>
@@ -27,7 +25,7 @@
             <h1 class="page-header">Validador de CPF</h1>
             <p>Através deste simples algoritmo, veremos diversos recursos e habilidades da linguagem Javascript</p>
         </div>
-
+        
     </div>
     <div class="container formulario">
         <form>
@@ -35,10 +33,10 @@
                 <div class="input-group input-group-lg">
                     <span class="input-group-addon" id="sizing-addon1">CPF</span>
                     <input id="cpf_digitado" type="text" class="form-control" placeholder="Digite o cpf para validação ..."
-                        aria-describedby="sizing-addon1">
+                        aria-describedby="sizing-addon1" name="cpf_digitado">
+                    </div>
+                    <small class="form-text text-muted">Digite somente números</small>
                 </div>
-                <small class="form-text text-muted">Digite somente números</small>
-            </div>
           <button type="button" class="btn btn-info" onclick="validacao()">Validar!</button>
         </form>
     </div>
@@ -50,16 +48,21 @@
             <strong>Ops!</strong> Seu CPF não é válido.
         </div>
     </div>
-
 </body>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mask.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"></script>
 
 <script src="./js/script.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#cpf_digitado").mask("000.000.000-00");
+    });
+</script>
 
 </html>

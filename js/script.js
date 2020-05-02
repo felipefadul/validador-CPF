@@ -1,4 +1,7 @@
 function validarCPF(cpf) {
+  cpf = cpf.split('.').join("");
+  cpf = cpf.split('-').join("");
+
   if (cpf.length != 11)
     return false;
 
