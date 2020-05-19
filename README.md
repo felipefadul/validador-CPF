@@ -14,7 +14,7 @@ Exercício proposto no programa Hiring Coders da [Gama Academy](https://gama.aca
 ## Autor
 - [Felipe Fadul](https://linkedin.com/in/felipefadul)
 
-## Licensa
+## Licença
 - [MIT License](LICENSE)
 
 ## Créditos
